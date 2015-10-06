@@ -23,8 +23,8 @@
 \begin{exampleblock}{Umsetzung}
 \begin{itemize}
 \item Steuerung durch einen Raspberry Pi
-\item Adafruit Dotstar LED Strip
-\item Standventilatormotor als Antrieb
+\item Adafruit Dotstar LED Strip (60 RGB-LEDs; ca. 4kHz)
+\item Standventilatormotor als Antrieb (ca. 7 Umdrehungen/s)
 \item Programmierung in Python
 \end{itemize}
 \end{exampleblock}
@@ -34,13 +34,15 @@
 \begin{frame}{Persitence Of Vision (POV)}
 \begin{exampleblock}{}
 \begin{itemize}
-\item Das Auge kann Reize nur mit einer bestimmten Frequenz verarbeiten
+\item Das Auge kann Reize nur mit einer bestimmten Frequenz verarbeiten\\
+(z.B. Filme: 24Hz; Cartoons: 12Hz)\\
 \begin{itemize}
-\item[]\Rightarrow Eine schnell bewegte Lichtquelle wird als Linie wahrgenommen
-\item[]\Rightarrow Eine schnell bewegte, \emph{blinkende} Lichtquelle wird als mehrere Pixel wahrgenommen
+\item[]\Rightarrow\ schnell bewegte Lichtquelle erscheint als Linie
+\item[]\Rightarrow\ schnell bewegte, \emph{blinkende} Lichtquelle erscheint als mehrere Pixel
 \end{itemize}
-\item Schnell rotierender Kreis \Rightarrow Kugeloberfläche
-\item + (synchron zur Drehfrequenz) blinkende LED-Zeile \Rightarrow POV-Globe 
+\ \\
+\item Schnell rotierender Kreis \Rightarrow\ Kugeloberfläche
+\item + (synchron zur Drehfrequenz) blinkende LED-Zeile \Rightarrow\ POV-Globus
 \end{itemize}
 \end{exampleblock}
 \end{frame}
@@ -90,8 +92,13 @@
 \end{frame}
 
 \begin{frame}{Features}
+\begin{figure}
+\center
+\includegraphics[height=0.25\textheight]{Plots/Klinke2}
+\end{figure}
 \begin{exampleblock}{}
 Datenübertragung über 4 Pol Klinke (axial gelagert)
+\\\ \\
 \begin{itemize}
 \item Idee: Nur der LED-Schlauch soll rotieren
 \item LED Schlauch benötigt 4 Anschlüsse: VCC, GND, DATA, CLOCK 
@@ -100,22 +107,71 @@ Datenübertragung über 4 Pol Klinke (axial gelagert)
 \end{exampleblock}
 \end{frame}
 
+\section{Realisierung und Code}
 
-\begin{frame}{POV}
-%\begin{listings}
-%\end{listings}
-\lstinputlisting[firstline=10,lastline=20]{show_pov.py}
+\begin{frame}{Datenaufbereitung}
+Zur optimalen Ausnutzung des 60 LED-Schlauchs:\\
+Invertierung und Schachtelung der Zeilen!\\
+\ \\
+Mapping:\\
+LED \ 0 \rightarrow\ Zeile 58\qquad\qquad\qquad LED 30 \rightarrow\ Zeile \ 1\\
+LED \ 1 \rightarrow\ Zeile 56\qquad\qquad\qquad LED 31 \rightarrow\ Zeile \ 3\\
+LED \ 2 \rightarrow\ Zeile 54\qquad\qquad\qquad LED 32 \rightarrow\ Zeile \ 5\\
+...\qquad\qquad\qquad\qquad\qquad\qquad\ \ ...\\
+LED 29 \rightarrow\ Zeile \ 0\qquad\qquad\qquad LED 59 \rightarrow\ Zeile 59\\
+\ \\
+\Rightarrow\ Formel:\\
+LEDs 0 - 29: i \rightarrow\ $60-2\times(1+i)$\\
+LEDs 30-59:  i \rightarrow\ $1+2\times(i-30)$
 \end{frame}
 
-\begin{frame}{Sensor-Thread}
+\begin{frame}{Datenaufbereitung (Python)}
+%\begin{listings}
+%\end{listings}
+\lstinputlisting[firstline=25,lastline=42]{pngTOpov_demo.py}
+\end{frame}
+
+\begin{frame}{Datenaufbereitung (Python)}
+Außerdem: Verschiebung der Spalten der ungeraden Zeilen!\\
 \begin{itemize}
-\item Abfragereihenfolge: links, oben, rechts, oben, links, ...
-\item Bei Abfrage oben, drehe den Servo weiter nach rechts
-\item Am rechten Rand, springe nach links \\[0.5cm]
-\item Speichere aktuelle Sensordaten in Array
-\item Ignoriere Werte kleiner als 7cm
-\item Fünf Versuche für korrekte Messung
+\item gerade Zeilen: unverändert.
+\item ungerade Zeilen:
+\begin{itemize}
+\item Spalte \ 1-29 \rightarrow\ Spalte 30-59
+\item Spalte 31-59 \rightarrow\ Spalte \ 0-29
 \end{itemize}
+\end{itemize}
+
+%\begin{listings}
+%\end{listings}
+\lstinputlisting[firstline=47,lastline=57]{pngTOpov_demo.py}
+\end{frame}
+
+\begin{frame}{Ansteuerung und Datenübertragung}
+Jede LED benötigt 4 bytes: (0, blau, grün, rot)\\
+\Rightarrow\ Schlauch wird durch Liste von $4\times60=240$ bytes gesteuert.\\
+\ \\
+Die Umsetzung wird durch die Bibliothek \emph{dotstart} von \emph{Adafruit\_DotStar} mittels Clock- und Data-PINs (GPIO) realisiert.\\
+\end{frame}
+
+\begin{frame}{Ansteuerung und Datenübertragung}{}
+{\bf Wichtig:} Exakt richtiges Timing!\\
+\ \\
+\sim7 Umdrehungen pro Sekunde $=60$ Spalten \Rightarrow\ \sim0.0024s pro Spalte\\
+\rightarrow\ kleine Abweichung führt zu Verschiebung im Bild!\\
+\ \\
+{\bf Lösung zur Stabiliesierung:}\\
+\begin{itemize}
+\item Infrarot-LED misst Rotationsfrequenz
+\item Script überprüft verstrichene Zeit im Code
+\item \Rightarrow\ angepasste Verzögerung zwischen einzelnen Spalten
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Datenübertragung (Python)}
+%\begin{listings}
+%\end{listings}
+\lstinputlisting[firstline=106,lastline=125]{show_pov_demo.py}
 \end{frame}
 
 \section{Probleme}
@@ -123,10 +179,12 @@ Datenübertragung über 4 Pol Klinke (axial gelagert)
 \begin{frame}{Probleme}
 \begin{itemize}
 \item Probleme mit diversen Motoren
-\item[] \rightarrow diverse Konzepte ausprobiert
-\item Datenübertragung
+\item[] \rightarrow\ diverse Konzepte ausprobiert
+\item Datenübertragung (Abrieb des Klinkensteckers; fehleranfällig)
 \item Lagerung des Kreises
 \item zentrische Lagerung der gesamten Konstruktion
+\item exakte Anpassung des Skripts an Rotationsfrequenz
+\item zerstörter LED-Schlauch
 \end{itemize}
 \end{frame}
 
@@ -137,7 +195,7 @@ Datenübertragung über 4 Pol Klinke (axial gelagert)
 \item Verbesserung der Bildverarbeitung
 \begin{itemize}
 \item bewegte Bilder
-\item Schrift Übertragen
+\item Schrift / Laufschrift
 \item Spiele programmieren
 \end{itemize}
 \item bessere Lagerung
@@ -148,7 +206,6 @@ Datenübertragung über 4 Pol Klinke (axial gelagert)
 
 \begin{frame}
 \begin{center}
-\textcolor{darkred}{
-Vielen Dank für Ihre Aufmerksamkeit}
+\textcolor{darkred}{\huge Vielen Dank für Ihre Aufmerksamkeit!}
 \end{center}
 \end{frame}
