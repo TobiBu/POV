@@ -1,18 +1,18 @@
 ---
 layout: default
-title: The GPS on wheels project
+title: The POV Globe Project
 description: Description of our goals, resources and so on.
 category: project
 ---
 
 <div class="inner">
 <h1 align="center">
-GPS on Wheels - A Robotics-Project at the IWR in Heidelberg
+POV Globe - A Robotics-Project at the IWR in Heidelberg
 </h1>
-<table border=0><tr><td align=center><img src="{{ site.baseurl }}/images/project/transparent3.png" width=45% alt="Our model car." title="Our model car: The Reely Blaze"></td></tr></table>
+<table border=0><tr><td align=center><img src="{{ site.baseurl }}/images/setup.jpg" width=45% alt="Our POV Globe." title="Our POV Globe"></td></tr></table>
 <p class="fancy" align="justify">
-This winter term we're doing an interesting internship at our university: We're constructing a robotic RC-car, supplied with a Rasperry Pi-Computer and a GPS-module in order to be able to drive autonomously. <br>
-The internship started in October 2014 already and lasts until the end of March approximately.
+This summer term we have completed an interesting internship at our university: We're constructing a persitence of vision globe. <br>
+The internship started in June 2015 already and lasted until the October 2015.
 </p>
 
 <br>
@@ -133,7 +133,7 @@ Actually the project can be summarized shortly:
 <img src="{{ site.baseurl }}/images/project/plus.jpg" alt=" plus " width="7%">
 <img src="{{ site.baseurl }}/images/project/brain.gif" alt=" plus " width="7%">
 <img src="{{ site.baseurl }}/images/project/equal.gif" alt=" gives " width="7%">
-<img src="{{ site.baseurl }}/images/project/transparent_side.png" alt=" an awesome robot-car " width="15%">
+<img src="{{ site.baseurl }}/images/project/transparent_side.png" alt=" an awesome robot-car! " width="15%">
 </td></tr></table>
 
 </div>
