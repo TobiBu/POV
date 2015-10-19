@@ -1,8 +1,0 @@
-\beamer@sectionintoc {1}{Projektziel}{3}{0}{1}
-\beamer@sectionintoc {2}{POV-Prinzip}{4}{0}{2}
-\beamer@sectionintoc {3}{Komponenten}{5}{0}{3}
-\beamer@sectionintoc {4}{Realisierung und Code}{11}{0}{4}
-\beamer@sectionintoc {5}{Probleme}{17}{0}{5}
-\beamer@sectionintoc {6}{Ausblick}{18}{0}{6}
-\beamer@endinputifotherversion {3.33pt}
-\select@language {ngerman}
