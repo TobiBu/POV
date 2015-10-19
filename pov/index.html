@@ -1,0 +1,80 @@
+---
+layout: default
+title: Persistence of Vision
+description: Explaination of the POV principle
+category: links
+---
+
+<div class="inner">
+<h1 align="center">
+POV - The Persistence of Vision Principle
+</h1>
+<br>
+
+<p class="fancy" align="justify">
+
+</p>
+The human eye cannot track motion above a certain speed. This is due to some dead time of the optical nerves during the acquisition and processing of optical stimuli. So the fastest "framerate" a human can resolve is about 24 Hz and something which moves faster is smeared out along its trajectory. On a longer timescale, this is similar to the looks of cars in night shots of cities with high integration time: the car vanishes, only its lights leave two glowing trajectories in the picture.
+
+Persistence of vision makes use of this lazyness of the eye. If a fast moving light source is persepted as line, a fast moving and therewhile BLINKING light source creates several pixels. In the case of the POV Globe,
+
+Das Auge kann Reize nur mit einer bestimmten Frequenz verarbeiten
+(z.B. Filme: 24Hz; Cartoons: 12Hz)
+⇒ schnell bewegte Lichtquelle erscheint als Linie
+⇒ schnell bewegte, blinkende Lichtquelle erscheint als mehrere Pixel
+Schnell rotierender Kreis ⇒ Kugeloberfläche
++ (synchron zur Drehfrequenz) blinkende LED-Zeile ⇒ POV-Globus
+<br>
+
+<div  style="border-bottom: 1px solid #ddd"></div>
+<h2>
+Servos and cruise control
+</h2>
+<ul>
+<li> The Python module <a href="https://pythonhosted.org/RPIO/pwm_py.html">RPIO</a> provides PWM signals, which are used to control the servos. 
+<li> Depending on which model of the Raspi one is using, the GPIO pin setup may vary. <a href="http://www.google.de/imgres?imgurl=http%3A%2F%2Fwww.raspberrypi-spy.co.uk%2Fwp-content%2Fuploads%2F2012%2F06%2FRaspberry-Pi-GPIO-Layout-Model-B-Plus-rotated-2700x900.png&imgrefurl=http%3A%2F%2Fwww.raspberrypi-spy.co.uk%2F2012%2F06%2Fsimple-guide-to-the-rpi-gpio-header-and-pins%2F&h=900&w=2700&tbnid=1s_dW8iG1gIUEM%3A&zoom=1&docid=fG3ZQEqm-NsWUM&ei=jtk8VZ6uLsTsaPL2gSA&tbm=isch&client=ubuntu&iact=rc&uact=3&dur=917&page=1&start=0&ndsp=19&ved=0CEcQrQMwDQ">This page</a> gives a good overview about GPIO pins on the Pi in general.
+</ul>
+
+<br>
+<div  style="border-bottom: 1px solid #ddd"></div>
+<h2>
+Ultrasonic sensors
+</h2>
+<ul>
+<li> The <a href="http://www.micropik.com/PDF/HCSR04.pdf">data sheet</a> of the HC-SR04 ultrasonic ranging module.
+<li> The more detailed <a href="https://docs.google.com/document/d/1Y-yZnNhMYy7rwhAgyL_pfa39RsB-x2qR4vP8saG73rE/edit">user's manual</a>.
+<li> How to connect it to the <a href="https://www.modmypi.com/blog/hc-sr04-ultrasonic-range-sensor-on-the-raspberry-pi">Raspberry Pi</a>.
+</ul>
+
+
+<br>
+<div  style="border-bottom: 1px solid #ddd"></div>
+<h2>
+The GPS module
+</h2><ul>
+<li> Connecting the <a href="http://diydrones.com/profiles/blogs/how-to-connect-3dr-gps-ublox-to-raspberry-pi">3DR GPS uBlox</a> and communicating with it.
+<li> Reading the GPS data in a Python thread. Thanks to <a href="http://www.danmandle.com/blog/getting-gpsd-to-work-with-python/">Dan Mandle</a>.
+</ul>
+
+
+<br>
+<div  style="border-bottom: 1px solid #ddd"></div>
+<h2>
+Papers for the navigation algorithm
+</h2>
+<ul>
+<li> Paper <a href="http://www.academia.edu/757737/Reactive_Navigation_Algorithm_for_Wheeled_Mobile_Robots_under_Non-Holonomic_Constraints">one</a>.
+<li> Paper <a href="http://cdn.intechopen.com/pdfs-wm/6321.pdf">two</a>.
+</ul>
+
+
+<br>
+<div  style="border-bottom: 1px solid #ddd"></div>
+<h2>
+Voltage regulator
+</h2>
+<ul>
+<li> How to build a simple <a href="http://reviseomatic.org/help/e-components/Voltage%20Regulator.php">voltage regulator</a>.
+</ul>
+
+</div>

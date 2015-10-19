@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<div class="inner">
+
+  <h1>The Team</h1>
+
+  <p class="fancy" align="justify">
+    During the winter term 2014/15 we did a robotics internship where we constructed a <a href="http://gps-robotic.github.io/Motorization/">RC car with onboard GPS and navigation</a>. Afterwards we really wanted to continue working together and proposed to construct a POV Globe. We all study/ studied physics in Heidelberg and met during the Bachelor. Some time ago, we realized, that we might as well never grow up and that soldering LEDs is more fun than integrating around poles in the complex plane.
+  </p>
+
+  <table border="0"><tr><td align="center">
+  <a name="TEXT"></a>
+  <img src="{{ site.baseurl }}/images/team/team.png" alt="Our Team" align="middle" width="50%">
+  </td></tr></table>
+
+  <p class="fancy">
+    But let us introduce ourselves:
+  </p>
+
+  <ul class="team-nav">
+    <li {% if page.url == '/team/index.html' %}class="active"{% endif %}>
+      <a href="{{ site.baseurl }}/team/index.html#TEXT">Max</a>
+      </li><li {% if page.url == '/team/tobi.html' %}class="active"{% endif %}>
+      <a href="{{ site.baseurl }}/team/tobi.html#TEXT">Tobi</a>
+    </li><li {% if page.url == '/team/philipp.html' %}class="active"{% endif %}>
+      <a href="{{ site.baseurl }}/team/philipp.html#TEXT">Philipp</a>
+    </li>
+  </ul>
+
+  {{ content }}
+
+  <div class="fancy center convinced">
+    <!-- <a class="btn btn-lg" href="http://freelancebooking.pro/en/users/ssaunier">Book me</a>
+
+    <br /><br /> -->
+
+  </div>
+
+</div>
