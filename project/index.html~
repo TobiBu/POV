@@ -122,15 +122,13 @@ This is just a test:<br>
 
 <li> a 4-PIN jack-plug like <a href="{{ site.baseurl }}/images/jack.jpg">this one</a> for transmitting the signal onto the rotating body,
 
-<li> motor inkl spannungsquelle
+<li> a motor of an old room-fan like <a href="{{ site.baseurl }}/images/fan.jpg">this one</a> for rotating the LEDs. We located it beneath the wooden slab. The advantage of this one is: It already comes with a common 230V-power supply-plug.
 
-<li> rotationsapperatur: kugellager, stange, grillrost
+<li> the rotating construction, consisting of a aluminium rod (axis of the rotating system), two ball bearings and a circular grate holding the LED strip (we used a barbecue-cooking grate here ;) ),
 
-<li> zahnräder & riemen (selbst gemacht)
+<li> a toothed belt and two self-made gear-wheels to bring the rotation onto the grate and
 
-<li> a big wooden slab to support the construction,
-
-<li> some aluminium rods to fasten the construction and minimize shakings from the rotations,
+<li> a big wooden slab and some aluminium rods to support the construction and minimize shakings from the rotations.
 
 </ul>
 
