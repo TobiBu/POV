@@ -47,13 +47,13 @@ Besides some cables, switches, diodes, resistors, connectors and screws, the com
 
 <ul>
 
-<li> a mini computer <a href="http://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi Model B+</a> (<a href="{{ site.baseurl }}/images/project/components/raspi1.jpg" target="_blank">image1</a>, <a href="{{ site.baseurl }}/images/project/components/raspi2.jpg" target="_blank">image2</a>),
+<li> a mini computer <a href="http://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi Model B+</a>,
 
 <li> a 4GB micro SD-card (anyone like <a href="http://www.kingston.com/de/flash/microsd_cards#">these</a>)<br>(Note: I suggest picking a bigger one than 4GB, we had some problems with the space during our work. 8GB is already fine.),
 
 <li> a simple <a href="http://www.tp-link.us/products/details/?categoryid=3958&model=TL-WN823N">wireless-adapter</a> from <a href="http://www.tp-link.us/">TP-Link</a> for remote-ssh-control (AP-mode)<br>[Note: this model is actually not the best choice to work with on a Raspi] (<a href="{{ site.baseurl }}/images/project/components/wlan.jpg" target="_blank">image</a>),
 
-<li> a <a href="http://www.adafruit.com/product/2239">DotStar</a> LED strip from Adafruit. 60 separately addressable LEDs on a 1m-strip. Easily addressable via 4-PINS (5Volts, Ground, Data and Clock). High refreshing frequency, thus suitable for POV. (NOTE: NeoPixels is too slow, for example!),
+<li> a <a href="http://www.adafruit.com/product/2239">DotStar</a> LED strip from Adafruit: 60 separately addressable LEDs on a 1m-strip. Easily addressable via 4-PINS (5Volts, Ground, Data and Clock). High refreshing frequency, thus suitable for POV. (NOTE: NeoPixels is too slow, for example!),
 
 <li> an infrared LED on the rotating body & a photodiode on the not-rotating part for thus measuring the rotating-frequency,
 
@@ -109,12 +109,13 @@ The following pictures demonstrate how the single components work together in ou
 <h2 align="center">
 The programming and scripts
 </h2>
+
 <p class="fancy" align="justify">
 For the scripts and the programming, we mainly used Python as an easy and Raspi-friendly programming language. All the scripts we wrote and used, can be found <a href="https://github.com/TobiBu/POV">here</a> in the folder "Raspi". Use them or copy whatever you need from them! (Note, that you may have to install some software on your Raspi like GPIO- & PWM controls or <a href="https://learn.adafruit.com/adafruit-dotstar-leds/overview">Adafruit's package</a> for controlling LED strips.)
 <br>
-The software mainly consists of a background-thread determining the rotating-frequency (get_freq.py; it simply waits for signals on one of the GPIO-PINs and calculates the time between single signals), another background-thread controling the LED-Strip (pov_control.py) via the GPIO-PINs conntected to Clock and Data of the Strip and using the given <a href="https://learn.adafruit.com/adafruit-dotstar-leds/overview">module from Adafruit</a> (dotstar.c / dotstar.so) and the code for the user interface (main.py).
+The software mainly consists of a background-thread determining the rotating-frequency (get_freq.py; it simply waits for signals on one of the GPIO-PINs and calculates the time between single signals), another background-thread controlling the LED-Strip (pov_control.py) via the GPIO-PINs conntected to Clock and Data of the Strip and using the given <a href="https://learn.adafruit.com/adafruit-dotstar-leds/overview">module from Adafruit</a> (dotstar.c / dotstar.so) and the code for the user interface (main.py).
 <br>
-Furthermore you will find pngTOpov.py, which converts given png-files into a byte-list pov-file which is used by pov_control.py.
+Furthermore you will find pngTOpov.py, which converts given png-files into a byte-list pov-file, the type of file which is used by pov_control.py.
 <br>
 <br>
 Broadly speaking the png-files are converted into a array containing 4 bytes for each pixel: (0, BLUE, GREEN, RED), where each color is a gamma-corrected value. As we have 60 LEDs, the strip receives a list of 4 times 60 bytes for each new position while the rotation. Transmitting the data is mainly done by Adafruit's module.
@@ -124,14 +125,28 @@ The 60 LEDs correspond to a total height of 60 pixels, whereas the width is set 
 If the total width of the png-file is bigger than 60, the further columns are interpreted as new images after one or several rotations (like an animation). A height greater than 60 is simply reduced to the first 60 pixels.
 <br>
 <br>
-In the following you can see some example png-files and the resulting image on the running POV:
+<a href="{{ site.baseurl }}/images/ex_video.mp4" target="_blank">Here</a> there is a short video demostrating the running POV globe and in the following you can see some example png-files and the resulting images on the running POV (note, the faint red LEDs are displaying wrong due to some error):
+
 </p>
+
+<p class="fancy" align="justify">
 
 <table border="0">
 <tr><td align="center" valign="middle">
-<small>The toothed belt and the gear-wheel connected to the rotating body, as well as the infrared-system:</small>
-<img src="{{ site.baseurl }}/images/Zahnriemen.jpg" alt="toothed belt and gear-wheel; infrared-LED and photodiode" width="80%" title="toothed belt and gear-wheel; infrared-LED and photodiode">
-</td></tr></table>
+<img src="{{ site.baseurl }}/images/ex1.png" alt="1st example: a house and a tree (png)" width="100%" title="1st example: a house and a tree (png)">
+</td><td align="center" valign="middle">
+<img src="{{ site.baseurl }}/images/ex1.jpg" alt="1st example: a house and a tree (foto)" width="50%" title="1st example: a house and a tree (foto)">
+</td></tr>
+<tr><td align="center" valign="middle">
+<img src="{{ site.baseurl }}/images/ex2.png" alt="2nd example: a worldmap (png)" width="100%" title="2nd example: a worldmap (png)">
+</td><td align="center" valign="middle">
+<img src="{{ site.baseurl }}/images/ex2.1.jpg" alt="2nd example: a worldmap (foto 1)" width="50%" title="2nd example: a worldmap (foto 1)">
+</td><td align="center" valign="middle">
+<img src="{{ site.baseurl }}/images/ex2.2.jpg" alt="2nd example: a worldmap (foto 2)" width="50%" title="2nd example: a worldmap (foto 2)">
+</td></tr>
+</table>
+
+</p>
 
 <br>
 <div  style="border-bottom: 1px solid #ddd"></div>
