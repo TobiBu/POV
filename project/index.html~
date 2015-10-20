@@ -47,6 +47,64 @@ Besides some cables, switches, diodes, resistors, connectors and screws, the com
 
 <ul>
 
+<li> a mini computer <a href="http://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi Model B+</a> (<a href="{{ site.baseurl }}/images/project/components/raspi1.jpg" target="_blank">image1</a>, <a href="{{ site.baseurl }}/images/project/components/raspi2.jpg" target="_blank">image2</a>)
+
+<li> a 4GB micro SD-card (anyone like <a href="http://www.kingston.com/de/flash/microsd_cards#">these</a>)<br>[Note: I suggest picking a bigger one than 4GB, we had some problems with the space during our work. 8GB is already fine.]
+
+<li> a simple <a href="http://www.tp-link.us/products/details/?categoryid=3958&model=TL-WN823N">wireless-adapter</a> from <a href="http://www.tp-link.us/">TP-Link</a> for remote-ssh-control (AP-mode)<br>[Note: this model is actually not the best choice to work with on a Raspi] (<a href="{{ site.baseurl }}/images/project/components/wlan.jpg" target="_blank">image</a>) and
+
+<li> led schlauch
+
+<li> infrarot led & photodiode
+
+<li> klinkenstecker & buchse
+
+<li> motor inkl spannungsquelle
+
+<li> rotationsapperatur: kugellager, stange, grillrost
+
+<li> zahnräder & riemen (selbst gemacht)
+
+<li> a big wooden slab to support the construction,
+
+<li> some aluminium rods to fasten the construction and minimize shakings from the rotations,
+
+</ul>
+
+<br>
+The following pictures demonstrate how the single components work together in our construction (descriptions in the pictures are available in german only - sorry for that). For detailed questions, please <a href="{{ site.baseurl }}/contact">contact us</a>!
+<br>
+
+<table border="0">
+<tr><td align="center" valign="middle">
+<img src="{{ site.baseurl }}/images/Klinke.jpg" alt="" width="80%" title="">
+</td></tr>
+<tr><td align="center" valign="middle">
+<img src="{{ site.baseurl }}/images/Komponenten.jpg" alt="" width="80%" title="">
+</td></tr>
+<tr><td align="center" valign="middle">
+<img src="{{ site.baseurl }}/images/Motor.jpg" alt="" width="80%" title="">
+</td></tr>
+<tr><td align="center" valign="middle">
+<img src="{{ site.baseurl }}/images/Motor_oben.jpg" alt="" width="80%" title="">
+</td></tr>
+<tr><td align="center" valign="middle">
+<img src="{{ site.baseurl }}/images/Zahnriemen.jpg" alt="" width="80%" title="">
+</td></tr></table>
+
+<br>
+<div  style="border-bottom: 1px solid #ddd"></div>
+
+<h2 align="center">
+The programming and scripts
+</h2>
+<p class="fancy" align="justify">
+This is just a test:<br>
+<quote>TEST</quote>
+</p>
+
+
+<ul>
 
 <li> a mini computer <a href="http://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi Model B+</a> (<a href="{{ site.baseurl }}/images/project/components/raspi1.jpg" target="_blank">image1</a>, <a href="{{ site.baseurl }}/images/project/components/raspi2.jpg" target="_blank">image2</a>)
 
@@ -54,21 +112,24 @@ Besides some cables, switches, diodes, resistors, connectors and screws, the com
 
 <li> a simple <a href="http://www.tp-link.us/products/details/?categoryid=3958&model=TL-WN823N">wireless-adapter</a> from <a href="http://www.tp-link.us/">TP-Link</a> for remote-ssh-control (AP-mode)<br>[Note: this model is actually not the best choice to work with on a Raspi] (<a href="{{ site.baseurl }}/images/project/components/wlan.jpg" target="_blank">image</a>) and
 
-<li> a self-made 7V to 5V voltage-regulator (which seems to work fine with 9.6V, too) (<a href="{{ site.baseurl }}/images/project/components/voltage_regulator.jpg" target="_blank">image</a>)
+<li> led schlauch
+
+<li>infrarot led & photodiode
+
+<li>klinkenstecker & buchse
+
+<li> motor inkl spannungsquelle
+
+<li> rotationsapperatur: kugellager, stange, grillrost
+
+<li> zahnräder & riemen (selbst gemacht)
 
 <li> a big wooden slab to support the construction,
 
 <li> some aluminium rods to fasten the construction and minimize shakings from the rotations,
 
-<li>
+</ul>
 
-motor inkl spannungsquelle
-raspi & karte
-infrarot led & photodiode
-led schlauch
-klinkenstecker & buchse
-rotationsapperatur: kugellager, stange, grillrost
-zahnräder & riemen (selbst gemacht)
 
 programmcode:
 python
@@ -79,7 +140,6 @@ beispiel bilder (png & fotos)
 
 
 
-</ul>
 
 <br>
 <div  style="border-bottom: 1px solid #ddd"></div>
