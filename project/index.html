@@ -37,17 +37,15 @@ The resources & components
 <p class="fancy" align="justify">
 As we planed to take the super-fancy robot home with us after finishing it, it was necessary to buy all the components by ourselves (the other groups got them payed by the robotics lab). Right from the beginning we tried to keep costs as low as possible (you know, as we're students, we always run out of money.... =/ ) - of course this resulted in a little loss of quality.
 <BR>
-Programming tecniques, information about how to build a POV-globe were either our personal knowledge or open-source from the internet.
+The Programming tecniques and the information about how to build a POV-globe were either our personal knowledge or open-source from the internet.
 <br>
-Finally we had a great benefit of using the working-room of the robotics-lab, equipped with computers, internet and a lot of hardware-stuff (cables, connectors, electronic components, wood, metal, screws, ...); thanks IWR! Also any tools needed, such as screw-drivers, drilling machines, saws, soldering irons, voltage and ampere meters, voltage suppliers and many more things, could be found and used there.<br>
+Finally we had a great benefit of using the working-room of the robotics-lab, equipped with computers, internet and a lot of hardware-stuff (cables, connectors, electronic components, wood, metal, screws and many other things); thanks IWR! Also any tools needed, such as screw-drivers, drilling machines, saws, soldering irons, voltage and ampere meters, voltage suppliers and many more things, could be found and used there.<br>
 <br>
-Besides some cables, switches, diodes, resistors, connectors and screws, the components we are using, are
+Besides some cables, switches, diodes, resistors, connectors and screws, the components we were using, are
 </p>
 
 
 <ul>
-
-
 
 <li> a mini computer <a href="http://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi Model B+</a> (<a href="{{ site.baseurl }}/images/project/components/raspi1.jpg" target="_blank">image1</a>, <a href="{{ site.baseurl }}/images/project/components/raspi2.jpg" target="_blank">image2</a>)
 
@@ -55,9 +53,85 @@ Besides some cables, switches, diodes, resistors, connectors and screws, the com
 
 <li> a simple <a href="http://www.tp-link.us/products/details/?categoryid=3958&model=TL-WN823N">wireless-adapter</a> from <a href="http://www.tp-link.us/">TP-Link</a> for remote-ssh-control (AP-mode)<br>[Note: this model is actually not the best choice to work with on a Raspi] (<a href="{{ site.baseurl }}/images/project/components/wlan.jpg" target="_blank">image</a>) and
 
-<li> a self-made 7V to 5V voltage-regulator (which seems to work fine with 9.6V, too) (<a href="{{ site.baseurl }}/images/project/components/voltage_regulator.jpg" target="_blank">image</a>)
+<li> led schlauch
+
+<li>infrarot led & photodiode
+
+<li>klinkenstecker & buchse
+
+<li> motor inkl spannungsquelle
+
+<li> rotationsapperatur: kugellager, stange, grillrost
+
+<li> zahnräder & riemen (selbst gemacht)
+
+<li> a big wooden slab to support the construction,
+
+<li> some aluminium rods to fasten the construction and minimize shakings from the rotations,
 
 </ul>
+
+
+programmcode:
+python
+frequenzmessung
+adafruit: dotstar ansteuern
+
+beispiel bilder (png & fotos)
+
+<br>
+<div  style="border-bottom: 1px solid #ddd"></div>
+
+<h2 align="center">
+The programming and scripts
+</h2>
+<p class="fancy" align="justify">
+As we planed to take the super-fancy robot home with us after finishing it, it was necessary to buy all the components by ourselves (the other groups got them payed by the robotics lab). Right from the beginning we tried to keep costs as low as possible (you know, as we're students, we always run out of money.... =/ ) - of course this resulted in a little loss of quality.
+<BR>
+The Programming tecniques and the information about how to build a POV-globe were either our personal knowledge or open-source from the internet.
+<br>
+Finally we had a great benefit of using the working-room of the robotics-lab, equipped with computers, internet and a lot of hardware-stuff (cables, connectors, electronic components, wood, metal, screws and many other things); thanks IWR! Also any tools needed, such as screw-drivers, drilling machines, saws, soldering irons, voltage and ampere meters, voltage suppliers and many more things, could be found and used there.<br>
+<br>
+Besides some cables, switches, diodes, resistors, connectors and screws, the components we were using, are
+</p>
+
+
+<ul>
+
+<li> a mini computer <a href="http://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi Model B+</a> (<a href="{{ site.baseurl }}/images/project/components/raspi1.jpg" target="_blank">image1</a>, <a href="{{ site.baseurl }}/images/project/components/raspi2.jpg" target="_blank">image2</a>)
+
+<li> a 4GB micro SD-card (anyone like <a href="http://www.kingston.com/de/flash/microsd_cards#">these</a>)<br>[Note: I suggest picking a bigger one than 4GB, we had some problems with the space during our work. 8GB is already fine.]
+
+<li> a simple <a href="http://www.tp-link.us/products/details/?categoryid=3958&model=TL-WN823N">wireless-adapter</a> from <a href="http://www.tp-link.us/">TP-Link</a> for remote-ssh-control (AP-mode)<br>[Note: this model is actually not the best choice to work with on a Raspi] (<a href="{{ site.baseurl }}/images/project/components/wlan.jpg" target="_blank">image</a>) and
+
+<li> led schlauch
+
+<li>infrarot led & photodiode
+
+<li>klinkenstecker & buchse
+
+<li> motor inkl spannungsquelle
+
+<li> rotationsapperatur: kugellager, stange, grillrost
+
+<li> zahnräder & riemen (selbst gemacht)
+
+<li> a big wooden slab to support the construction,
+
+<li> some aluminium rods to fasten the construction and minimize shakings from the rotations,
+
+</ul>
+
+
+programmcode:
+python
+frequenzmessung
+adafruit: dotstar ansteuern
+
+beispiel bilder (png & fotos)
+
+
+
 
 <br>
 <div  style="border-bottom: 1px solid #ddd"></div>
@@ -67,28 +141,9 @@ This page
 </h2>
 <p class="fancy" align="justify">
 
-On this cool <a href="https://github.com">github</a>-webpage, made with <a href="jekyllrb.com">jekyll</a>, we want to tell anyone, who's interested, about our project.<br>
+On this cool <a href="https://github.com">github</a>-webpage, made with <a href="jekyllrb.com">jekyll</a>, we want to tell anyone, who's interested, about our project. The homepage files can be found <a href=https://github.com/TobiBu/POV/tree/gh-pages>here</a>. Use them for your own website, if you want!<br>
 If you have any questions, do not hesitate to aks <a href="{{ site.baseurl }}/contact">us</a>!
 
 </p>
-
-<br>
-<div  style="border-bottom: 1px solid #ddd"></div>
-<br>
-
-<p align=center>
-Actually the project can be summarized shortly:
-</p>
-<table border="0"><tr><td align="center" valign="middle">
-<img src="{{ site.baseurl }}/images/project/car.jpg" alt=" A RC-car " width="9%">
-<img src="{{ site.baseurl }}/images/project/plus.jpg" alt=" plus " width="7%">
-<img src="{{ site.baseurl }}/images/project/pi.png" alt=" a Raspberry Pi " width="7%">
-<img src="{{ site.baseurl }}/images/project/plus.jpg" alt=" plus " width="7%">
-<img src="{{ site.baseurl }}/images/project/gps.jpg" alt=" GPS-supported driving " width="7%">
-<img src="{{ site.baseurl }}/images/project/plus.jpg" alt=" plus " width="7%">
-<img src="{{ site.baseurl }}/images/project/brain.gif" alt=" plus " width="7%">
-<img src="{{ site.baseurl }}/images/project/equal.gif" alt=" gives " width="7%">
-<img src="{{ site.baseurl }}/images/project/transparent_side.png" alt=" an awesome robot-car! " width="15%">
-</td></tr></table>
 
 </div>
