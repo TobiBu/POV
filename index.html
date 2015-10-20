@@ -2,7 +2,7 @@
 layout: default
 category: about
 title: POV globe - Project homepage
-description: Providing information about us and the ongoing robotics internship.
+description: Providing information about us and the finished robotics internship.
 ---
 
 <section class="about-me inner" itemscope itemtype="http://data-vocabulary.org/Person">
@@ -14,7 +14,6 @@ description: Providing information about us and the ongoing robotics internship.
     </div>
     <span class="hello">
       Welcome to POV-globe,
-      <small><em>wir sprechen auch <a href="{{ site.baseurl }}/de/" rel="alternate" hreflang="de">deutsch</a>!</em></small>
     </span>
   </h1>
 
@@ -22,12 +21,13 @@ description: Providing information about us and the ongoing robotics internship.
     This page belongs to the advanced internship "POV-globe" of the 
 	<a href="http://joanna.iwr.uni-heidelberg.de/rlab/de/home">Robotics lab Heidelberg</a>
 	at the Interdisciplinary Center for Scientific Computing (IWR). 
-    The aim of this internship is the construction of "persistance of vision" (POV) globe.
-    Persitance of vision uses the slowness of the human eye to create some kind of image or screen
+    The aim of this internship is the construction of a "persistance of vision" (POV) globe.
+    <a href="{{ site.baseurl }}/pov/">Persistance of vision</a> uses the slowness of the human eye to create some kind of image or screen
     through the combination of fast moving, blinking light sources. In our case a strip of LEDs is attached
     to a ring which forms the surface of a globe, when the ring is spinning. When the blinking frequency is synchronized 
     to the spinning frequency, a stable image forms on the globe.<br>
-We use a RGB LED strip form <a href="https://learn.adafruit.com/adafruit-dotstar-leds/overview">Adafruit</a>,
+
+We use a Dotstar RGB LED strip form <a href="https://learn.adafruit.com/adafruit-dotstar-leds/overview">Adafruit</a>,
 controlled by a <a href="http://www.raspberrypi.org/">Raspberry Pi</a> as pixels and build makeshift framework to let it spin.<br>
 A short description of the project and our time management as .pdf file can be found <a href="{{ site.baseurl }}/images/Steckbrief.pdf">here</a>, unfortunately only in german. Our final presentation can be found <a href="{{ site.baseurl }}/images/Vortrag.pdf">here</a>.
   </p>
