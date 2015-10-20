@@ -7,22 +7,6 @@ The code is based on a modified version of the function for reading .png picture
 POV (Persistence of Vision) creates the illusion of moving objects by the use of a sequence of changing images with a frequency of at least 24 Hz.
 We used this effect to create a globe (consisting of rotating LEDs) on which we can address each LED on the globe's surface separately.
 
-In this github-repository you will find the code (Python, used with a Rasperry Pi B+) and some documentation. More information can be found on our website [POV Globe](https://TobiBu.github.io/POV)
-
-
-
-Motorization
-============
-
-Code for Raspberry Car Interface
-
-Jekyll website for the robotics internship [GPS on wheels](http://gps-robotic.github.io/Motorization/) to serve as a documentation platform. Come and check out what we do by combining a modell car, a Raspberry Pi and a GPS module.
-
---
-
-Mit Jekyll erstellte Dokumentations-Website des Robotik Praktikums [GPS auf Rädern](http://gps-robotic.github.io/Motorization/). Finde heraus, was passiert, wenn man ein Modellbau Auto mit einem Paspberry Pi und einem GPS Modul ausstattet.
-
+In this github-repository you will find the code (Python, used with a Rasperry Pi B+) and some documentation. More information can be found on our website [POV Globe](https://TobiBu.github.io/POV) (Website made with Jekyll).
 
 [![GPS on wheels](https://github.com/GPS-Robotic/Motorization/raw/gh-pages/images/ReelyBlaze.jpg)](http://gps-robotic.github.io/Motorization/)
-[![GPS on wheels](https://github.com/GPS-Robotic/Motorization/blob/gh-pages/images/galery/new_design_I.jpg)](http://gps-robotic.github.io/Motorization/)
-
