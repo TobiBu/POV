@@ -229,6 +229,7 @@ while run==True:
 									time.sleep(0.1)
 								Status=povPath+fN + " loaded and playing."
 								message=povPath + fN + " loaded."
+								raw_input("OK")
 
 		elif opt=="3":
 			if pov.pause==False and pov.running==True:
