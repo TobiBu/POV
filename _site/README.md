@@ -8,4 +8,4 @@ If you want to find out more about what is possible by separately addressing qui
 
 This website was constructed using Jekyll. If you want to, use the files to construct your own homepage!
 
-[![POV Globe](https://github.com/TobiBu/POV/raw/gh-pages/images/title.png)](http://TobiBu.github.io/POV)
+[![POV Globe](https://github.com/TobiBu/POV/raw/gh-pages/images/title.jpg)](http://TobiBu.github.io/POV)
