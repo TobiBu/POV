@@ -114,7 +114,7 @@ For the scripts and the programming, we mainly used Python as an easy and Raspi-
 <br>
 The software mainly consists of a background-thread determining the rotating-frequency (get_freq.py; it simply waits for signals on one of the GPIO-PINs and calculates the time between single signals), another background-thread controling the LED-Strip (pov_control.py) via the GPIO-PINs conntected to Clock and Data of the Strip and using the given <a href="https://learn.adafruit.com/adafruit-dotstar-leds/overview">module from Adafruit</a> (dotstar.c / dotstar.so) and the code for the user interface (main.py).
 <br>
-Furthermore you will find show_pov.py, which is a simple version for displaying png-files (hardcoded in the script), and pngTOpov.py, which converts given png-files into a byte-list pov-file which is used by pov_control.py.
+Furthermore you will find show_pov.py, which is a simple version for displaying png-files (without further options or interface), and pngTOpov.py, which converts given png-files into a byte-list pov-file which is used by pov_control.py.
 <br>
 <br>
 Broadly speaking the png-files are converted into a array containing 4 bytes for each pixel: (0, BLUE, GREEN, RED), where each color is a gamma-corrected value. As we have 60 LEDs, the strip receives a list of 4 times 60 bytes for each new position while the rotation. Transmitting the data is mainly done by Adafruit's module.
@@ -122,18 +122,16 @@ Broadly speaking the png-files are converted into a array containing 4 bytes for
 The 60 LEDs correspond to a total height of 60 pixels, whereas the width is set by the number of flashing-positions on the globe. For rotation-symmetry-reasons we also used 60 pixels as width.
 <br>
 If the total width of the png-file is bigger than 60, the further columns are interpreted as new images after one or several rotations (like an animation). A height greater than 60 is simply reduced to the first 60 pixels.
+<br>
+<br>
+In the following you can see some example png-files and the resulting image on the running POV:
 </p>
 
-
-<p class="fancy" align="justify">
-
-adafruit: dotstar ansteuern
-
-beispiel bilder (png & fotos)
-
-</p>
-
-
+<table border="0">
+<tr><td align="center" valign="middle">
+<small>The toothed belt and the gear-wheel connected to the rotating body, as well as the infrared-system:</small>
+<img src="{{ site.baseurl }}/images/Zahnriemen.jpg" alt="toothed belt and gear-wheel; infrared-LED and photodiode" width="80%" title="toothed belt and gear-wheel; infrared-LED and photodiode">
+</td></tr></table>
 
 <br>
 <div  style="border-bottom: 1px solid #ddd"></div>
