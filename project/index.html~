@@ -72,6 +72,8 @@ Besides some cables, switches, diodes, resistors, connectors and screws, the com
 </ul>
 
 <br>
+
+<p class="fancy" align="justify">
 The following pictures demonstrate how the single components work together in our construction (descriptions in the pictures are available in german only - sorry for that). For detailed questions, please <a href="{{ site.baseurl }}/contact">contact us</a>!
 <br>
 
@@ -92,6 +94,8 @@ The following pictures demonstrate how the single components work together in ou
 <img src="{{ site.baseurl }}/images/Zahnriemen.jpg" alt="" width="80%" title="">
 </td></tr></table>
 
+</p>
+
 <br>
 <div  style="border-bottom: 1px solid #ddd"></div>
 
@@ -106,17 +110,17 @@ This is just a test:<br>
 
 <ul>
 
-<li> a mini computer <a href="http://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi Model B+</a> (<a href="{{ site.baseurl }}/images/project/components/raspi1.jpg" target="_blank">image1</a>, <a href="{{ site.baseurl }}/images/project/components/raspi2.jpg" target="_blank">image2</a>)
+<li> a mini computer <a href="http://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi Model B+</a> (<a href="{{ site.baseurl }}/images/project/components/raspi1.jpg" target="_blank">image1</a>, <a href="{{ site.baseurl }}/images/project/components/raspi2.jpg" target="_blank">image2</a>),
 
-<li> a 4GB micro SD-card (anyone like <a href="http://www.kingston.com/de/flash/microsd_cards#">these</a>)<br>[Note: I suggest picking a bigger one than 4GB, we had some problems with the space during our work. 8GB is already fine.]
+<li> a 4GB micro SD-card (anyone like <a href="http://www.kingston.com/de/flash/microsd_cards#">these</a>)<br>(Note: I suggest picking a bigger one than 4GB, we had some problems with the space during our work. 8GB is already fine.),
 
-<li> a simple <a href="http://www.tp-link.us/products/details/?categoryid=3958&model=TL-WN823N">wireless-adapter</a> from <a href="http://www.tp-link.us/">TP-Link</a> for remote-ssh-control (AP-mode)<br>[Note: this model is actually not the best choice to work with on a Raspi] (<a href="{{ site.baseurl }}/images/project/components/wlan.jpg" target="_blank">image</a>) and
+<li> a simple <a href="http://www.tp-link.us/products/details/?categoryid=3958&model=TL-WN823N">wireless-adapter</a> from <a href="http://www.tp-link.us/">TP-Link</a> for remote-ssh-control (AP-mode)<br>[Note: this model is actually not the best choice to work with on a Raspi] (<a href="{{ site.baseurl }}/images/project/components/wlan.jpg" target="_blank">image</a>),
 
-<li> led schlauch
+<li> a <href="http://www.adafruit.com/product/2239">DotStar</a> LED strip from Adafruit. 60 separately addressable LEDs on a 1m-strip. Easily addressable via 4-PINS (5Volts, Ground, Data and Clock). High refreshing frequency, thus suitable for POV. (NOTE: NeoPixels is too slow, for example!),
 
-<li>infrarot led & photodiode
+<li> an infrared LED on the rotating body & a photodiode on the not-rotating part for thus measuring the rotating-frequency,
 
-<li>klinkenstecker & buchse
+<li> a 4-PIN jack-plug like <a href="{{ site.baseurl }}/images/jack.jpg">this one</a> for transmitting the signal onto the rotating body,
 
 <li> motor inkl spannungsquelle
 
@@ -130,6 +134,7 @@ This is just a test:<br>
 
 </ul>
 
+<p class="fancy" align="justify">
 
 programmcode:
 python
@@ -138,6 +143,7 @@ adafruit: dotstar ansteuern
 
 beispiel bilder (png & fotos)
 
+</p>
 
 
 
