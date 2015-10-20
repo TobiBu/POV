@@ -53,7 +53,7 @@ Besides some cables, switches, diodes, resistors, connectors and screws, the com
 
 <li> a simple <a href="http://www.tp-link.us/products/details/?categoryid=3958&model=TL-WN823N">wireless-adapter</a> from <a href="http://www.tp-link.us/">TP-Link</a> for remote-ssh-control (AP-mode)<br>[Note: this model is actually not the best choice to work with on a Raspi] (<a href="{{ site.baseurl }}/images/project/components/wlan.jpg" target="_blank">image</a>),
 
-<li> a <href="http://www.adafruit.com/product/2239">DotStar</a> LED strip from Adafruit. 60 separately addressable LEDs on a 1m-strip. Easily addressable via 4-PINS (5Volts, Ground, Data and Clock). High refreshing frequency, thus suitable for POV. (NOTE: NeoPixels is too slow, for example!),
+<li> a <a href="http://www.adafruit.com/product/2239">DotStar</a> LED strip from Adafruit. 60 separately addressable LEDs on a 1m-strip. Easily addressable via 4-PINS (5Volts, Ground, Data and Clock). High refreshing frequency, thus suitable for POV. (NOTE: NeoPixels is too slow, for example!),
 
 <li> an infrared LED on the rotating body & a photodiode on the not-rotating part for thus measuring the rotating-frequency,
 
@@ -61,7 +61,7 @@ Besides some cables, switches, diodes, resistors, connectors and screws, the com
 
 <li> a motor of an old room-fan like <a href="{{ site.baseurl }}/images/fan.jpg">this one</a> for rotating the LEDs. We located it beneath the wooden slab. The advantage of this one is: It already comes with a common 230V-power supply-plug.
 
-<li> the rotating construction, consisting of a aluminium rod (axis of the rotating system), two ball bearings and a circular grate holding the LED strip (we used a barbecue-cooking grate here ;) ),
+<li> the rotating construction, consisting of a aluminium rod (axis of the rotating system), two ball bearings and a circular grate holding the LED strip (we used a simple <a href="{{ site.baseurl }}/images/grate.jpg">barbecue-cooking</a> grate here ;) ),
 
 <li> a toothed belt and two (self-made) gear-wheels to bring the rotation onto the grate and
 
