@@ -9,4 +9,4 @@ We used this effect to create a globe (consisting of LEDs on a rotating circle) 
 
 In this github-repository you will find the code (Python, used with a Rasperry Pi B+) and some documentation. More information can be found on our website [POV Globe](https://TobiBu.github.io/POV) (made with Jekyll).
 
-[![POV Globe](https://github.com/TobiBu/POV/raw/gh-pages/images/title.png)](http://TobiBu.github.io/POV)
+[![POV Globe](https://github.com/TobiBu/POV/raw/gh-pages/images/title.jpg)](http://TobiBu.github.io/POV)
